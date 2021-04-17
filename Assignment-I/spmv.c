@@ -79,7 +79,7 @@ int main(int argc, char *argv[])
 	    fprintf(stderr,"y[%d]=%f, fails consistency test\n", row, y[row]);
 	}
     }
-    printf("Time for Sparse Ax, nrows=%d, nnz=%d, T = %f\n", nrows, nnz, t);
+    printf("Time for Sparse Ax, nrows=%d, nnz=%d, T = %.10f\n", nrows, nnz, t);
 
     free(ia); free(ja); free(a); free(x); free(y);
     return 0;

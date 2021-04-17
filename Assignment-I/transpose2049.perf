@@ -1,0 +1,14 @@
+Transpose 2049 x 2049
+BaseTime = 3.76e-02 s, Base Rate = 8.94e+02 MB/s
+
+ Performance counter stats for './transpose':
+
+     3,068,389,938      instructions              #    0.22  insn per cycle           (49.94%)
+    13,637,791,544      cycles                                                        (66.68%)
+       685,727,373      L1-dcache-load-misses     #  112.65% of all L1-dcache hits    (83.36%)
+       608,749,081      L1-dcache-loads                                               (83.36%)
+        51,694,410      LLC-load-misses           #   15.33% of all LL-cache hits     (33.28%)
+       337,139,153      LLC-loads                                                     (33.28%)
+
+       4.329650309 seconds time elapsed
+

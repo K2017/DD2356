@@ -1,0 +1,16 @@
+1. Initializing Matrices 
+2. Matrix Multiply 
+3. Sum = 15.948628 
+4. time = 0.000177
+
+ Performance counter stats for './matrix_multiply.out':
+
+        25,288,858      instructions              #    2.24  insn per cycle           (88.66%)
+        11,274,786      cycles                                                      
+           179,548      L1-dcache-load-misses     #    2.49% of all L1-dcache hits  
+         7,200,050      L1-dcache-loads                                             
+     <not counted>      LLC-load-misses                                               (0.00%)
+     <not counted>      LLC-loads                                                     (0.00%)
+
+       0.008338597 seconds time elapsed
+
