@@ -2,9 +2,9 @@
 
 out=$1
 threads=(1 2 4 8 12 16 20 24 28 32)
-for t in ${!threads[@]}
+for t in ${threads[@]}
 do 
-	OMP_NUM_THREADS=${threads[t]}
+	OMP_NUM_THREADS=$t
 
 	# compute average bandwidth
 	acc=0
