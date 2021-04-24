@@ -1,0 +1,40 @@
+DFTW calculation with N = 10000, number of threads = 1
+DFTW computation in average of 18.701421 seconds
+Standard Deviation: 0.004502
+Xre[0] = 10000.000000 
+DFTW calculation with N = 10000, number of threads = 2
+DFTW computation in average of 9.403565 seconds
+Standard Deviation: 0.003558
+Xre[0] = 10000.000000 
+DFTW calculation with N = 10000, number of threads = 4
+DFTW computation in average of 4.794954 seconds
+Standard Deviation: 0.001965
+Xre[0] = 10000.000000 
+DFTW calculation with N = 10000, number of threads = 8
+DFTW computation in average of 2.706164 seconds
+Standard Deviation: 0.001416
+Xre[0] = 10000.000000 
+DFTW calculation with N = 10000, number of threads = 12
+DFTW computation in average of 2.030728 seconds
+Standard Deviation: 0.001289
+Xre[0] = 10000.000000 
+DFTW calculation with N = 10000, number of threads = 16
+DFTW computation in average of 1.737624 seconds
+Standard Deviation: 0.000408
+Xre[0] = 10000.000000 
+DFTW calculation with N = 10000, number of threads = 20
+DFTW computation in average of 1.552609 seconds
+Standard Deviation: 0.000682
+Xre[0] = 10000.000000 
+DFTW calculation with N = 10000, number of threads = 24
+DFTW computation in average of 1.399488 seconds
+Standard Deviation: 0.001321
+Xre[0] = 10000.000000 
+DFTW calculation with N = 10000, number of threads = 28
+DFTW computation in average of 1.327109 seconds
+Standard Deviation: 0.000898
+Xre[0] = 10000.000000 
+DFTW calculation with N = 10000, number of threads = 32
+DFTW computation in average of 1.285587 seconds
+Standard Deviation: 0.001101
+Xre[0] = 10000.000000 
