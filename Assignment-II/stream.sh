@@ -2,16 +2,17 @@
 
 out=$1
 threads=(1 2 4 8 12 16 20 24 28 32)
+export OMP_SCHEDULE="guided"
 for t in ${threads[@]}
 do 
-	OMP_NUM_THREADS=$t
+	export OMP_NUM_THREADS=$t
 
 	# compute average bandwidth
 	acc=0
 	bw=()
 	for i in {1..5} 
 	do
-		b=`./stream | grep Copy: | awk '{print $2}'`
+		b=`./bin/stream | grep Copy: | awk '{print $2}'`
 		bw+=( $b )
 		acc=`echo $acc $b | awk '{print $1 + $2}'`
 

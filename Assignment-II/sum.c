@@ -54,17 +54,20 @@ double omp_critical_sum(double *x, size_t size)
 double omp_local_sum(double *x, size_t size)
 {
 	double sum_val = 0.0;
-	double local_sum;
-	#pragma omp parallel shared(sum_val) private(local_sum) 
+	double local_sum[MAX_THREADS];
+	#pragma omp parallel shared(local_sum) 
 	{
-		local_sum = 0.0;
+		int id = omp_get_thread_num();
+		local_sum[id] = 0.0;
 		#pragma omp for
 		for (size_t i = 0; i < size; i++) {
 			
-			local_sum += x[i];
+			local_sum[id] += x[i];
 		}
-		#pragma omp atomic
-		sum_val += local_sum;
+	}
+
+	for (int i = 0; i < MAX_THREADS; ++i) {
+		sum_val += local_sum[i];
 	}
 	
 	return sum_val;
@@ -114,7 +117,7 @@ int main(int argc, char** argv) {
 		double elapsed = 0.0;
 		for (int i = 0; i < n; ++i) {
 			double t1 = omp_get_wtime();
-			sums[i] = opt_local_sum(x, size);
+			sums[i] = omp_local_sum(x, size);
 			double t2 = omp_get_wtime();
 
 			//printf("sum: %lf\n", sums[i]);
